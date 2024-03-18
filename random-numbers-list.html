@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start-btn">Start!</button>
+    <ul id="number-container"></ul>
+    <script>
+        // lag en startknapp. Når bruker trykker på knappen kommer det opp en liste med 100 random tall i en liste. når bruker trykker igjen kommer det opp en ny knapp med 100 nye tall. 
+        const startBtn = document.getElementById("start-btn");
+        let numberContainer = document.getElementById("number-container");
+
+      
+    startBtn.onclick = function showRandomNumber() {
+        numberContainer.innerHTML = ""; 
+for (let i = 0; i < 100; i++) {
+    let randomNumbers = Math.floor(Math.random() * 100 +1);
+    let listItem = document.createElement("li");
+    listItem.textContent = randomNumbers;
+    numberContainer.appendChild(listItem);
+}
+    }
+    showRandomNumber()
+
+    </script>
+</body>
+</html>

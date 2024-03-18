@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="movie">Filmnavn:</label>
+    <input type="text" id="movie" placeholder="Skriv inn filmnavn" />
+    <label for="movie-year">Årstall film:</label>
+    <input type="text" id="movie-year" placeholder="Skriv inn årstall" />
+    <p id="info-printout"></p>
+    <button id="submit-btn">Ferdig</button>
+    <script>
+      // lag to inputfelt og en tom p-tag. Bruker skal skrive navnet på en film og når den kom ut.
+
+      //Skal lage to funksjoner: en som samler informasjonen og en som viser den frem. Må bruke parametere for å sende informasjonen videre. Når brukere trykker på ferdig-knappen skal informasjonen samles. Deretter skal den vises i p-taggen slik: "filmen x kom ut i år x"
+
+      const movie = document.getElementById("movie");
+      const movieYear = document.getElementById("movie-year");
+      const submitBtn = document.getElementById("submit-btn");
+      const infoPrintout = document.getElementById("info-printout");
+
+      function collectAndShowInfo() {
+        const movieName = movie.value;
+        const year = movieYear.value;
+        showInfo(movieName, year);
+      }
+
+      function showInfo(movieName, year) {
+        infoPrintout.innerHTML = `Filmen ${movieName}, kom ut i ${year}`;
+      }
+
+      submitBtn.onclick = collectAndShowInfo;
+    </script>
+  </body>
+</html>

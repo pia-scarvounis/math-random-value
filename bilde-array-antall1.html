@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="counter-txt"></div>
+    <div id="array-container"></div>
+    <script>
+        // Liste over bildestier
+        const imagePathArray = [
+            "/assets/1000.jpeg",
+            "/assets/butterfly.jpg",
+            "/assets/puppy.jpeg",
+            "/assets/sheep.jpeg",
+            "/assets/puppy.jpeg"
+        ];
+
+        const counterTxt = document.getElementById("counter-txt");
+        const arrayContainer = document.getElementById("array-container");
+
+        // Loop gjennom imagePathArray og opprett et nytt img-element for hver sti
+        imagePathArray.forEach((path) => {
+            const img = document.createElement('img');
+            img.src = path;
+            img.style.width = '100px'; // Juster størrelsen som ønsket
+            arrayContainer.appendChild(img);
+        });
+
+        // Oppdater tekst for å vise antall bilder i arrayet
+        counterTxt.textContent = `Det ligger ${imagePathArray.length} antall bilder i arrayet`;
+    </script>
+</body>
+</html>

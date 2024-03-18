@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="cat-btn">Vis katt!</button>
+    <p id="cat-counter-txt"></p>
+    <div id="cat-container"></div>
+    <script>
+        // lag en knapp. når bruker trykker på knappen skal det dukke opp bilde av en katt. det skal stå hvor mange katter som er på skjermen 
+        const catBtn = document.getElementById("cat-btn");
+        const catCounterTxt = document.getElementById("cat-counter-txt");
+        const catContainer = document.getElementById("cat-container");
+        let imgCounter = 0;
+
+        catBtn.onclick = function() {
+            showCats()
+        }
+      
+function showCats(){
+    const img = document.createElement('img');
+    img.src = '/assets/happy-cat.webp';
+    img.style.width = '50px';
+    img.style.height = '50px';
+    catContainer.appendChild(img);
+    imgCounter++;
+    catCounterTxt.textContent = `Det er ${imgCounter} antall katter på skjermen`;
+    
+}
+    </script>
+</body>
+</html>

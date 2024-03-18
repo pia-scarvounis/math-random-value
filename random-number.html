@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="show-random-number-btn">Vis et tilfeldig tall</button>
+    <p id="random-number-text"></p>
+    <script>
+        // opprett en knapp og en p-tag. Når bruker trykker på knappen skal det dukke opp et tall mellom 1 og 70. 
+
+        const showRandomNumberBtn = document.getElementById("show-random-number-btn");
+        const randomNumberTxt = document.getElementById("random-number-text");
+        
+
+        showRandomNumberBtn.onclick = function() {
+            const randomNumber = Math.floor(Math.random() * 70) +1;
+            randomNumberTxt.textContent = randomNumber;
+        }
+    
+            
+        
+
+
+    </script>
+</body>
+</html>

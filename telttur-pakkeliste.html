@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <h1>Telttur</h1>
+    <label for="pakkeliste">Pakkeliste</label>
+    <input type="text" id="pakkeliste" placeholder="Skriv her" />
+    <button id="add-btn">Add</button>
+    <p id="list-txt"></p>
+    <script>
+        const listTxt = document.getlementById("list-txt");
+        const addBtn = document.getElementById("add-btn");
+        const pakkeListe = document.getElementById("pakkeliste");
+        let packlistArray = ["Telt", "Tannbørste", "Solhatt"];
+
+        showPacklist();
+        addBtn.onclick = addPackingItem;
+
+
+        function addPackingItem() 
+         
+
+      // lag et input felt. Bruker skal kunne skrive ting hen må pakke til telttur og en knapp for å legge til ting. Hver gang bruker har lagt til en tekst og trykket på knappen skal tingen bli skrevet ut til en p-tag på nettsiden. Hver gang bruker har lagt til en tekst og trykket på knappen skal inputfeltet tømmes. Hvis input-feltet er tomt når bruker prøver å trykke på knappen skal bruker få en alert der det står: "Du må skrive noe i tekstfeltet".
+    </script>
+  </body>
+</html>

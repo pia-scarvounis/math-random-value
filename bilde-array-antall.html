@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="counter-txt"></div>
+    <div id="array-container"></div>
+    <script>
+        // last ned 5 bilder. lag et array med de 5 bildene. tekst som forteller hvor mange bilder det er i arrayet. 
+
+        const imageArray = [
+            `<img src="/assets/1000.jpeg"/>`,
+            `<img src="/assets/butterfly.jpg"/>`,
+            `<img src="/assets/puppy.jpeg"/>`,
+            `<img src="/assets/sheep.jpeg"/>`,
+            `<img src="/assets/puppy.jpeg"/>`
+        ]
+
+const counterTxt = document.getElementById("counter-txt");
+const arrayContainer = document.getElementById("array-container");
+
+for (let i = 0; i < imageArray.length; i++) {
+    arrayContainer.innerHTML += imageArray[i];
+}
+counterTxt.textContent = `det ligger ${imageArray.length} antall bilder i arrayet`;
+
+    </script>
+</body>
+</html>
